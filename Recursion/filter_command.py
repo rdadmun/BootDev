@@ -10,6 +10,21 @@ def get_filter_cmd(filter_one, filter_two):
             return "invalid option"
     return filter_cmd
 
+# OR
+
+def get_filter_cmd_2(filters):
+    def filter_cmd(content, options, word_pairs):
+        if len(options) == 0:
+            raise Exception("missing options")
+        for option in options:
+            if option in filters:
+                content = filters[option](content, word_pairs)
+            else:
+                raise Exception("invalid option")
+        return content
+
+    return filter_cmd
+
 
 # don't touch below this line
 
