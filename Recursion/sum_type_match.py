@@ -1,6 +1,4 @@
 from enum import Enum
-
-
 class DocFormat(Enum):
     PDF = 1
     TXT = 2
