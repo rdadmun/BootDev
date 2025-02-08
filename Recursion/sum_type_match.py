@@ -5,9 +5,7 @@ class DocFormat(Enum):
     MD = 3
     HTML = 4
 
-
 # don't touch above this line
-
 
 def convert_format(content, from_format, to_format):
     if from_format == DocFormat.MD and to_format == DocFormat.HTML:
